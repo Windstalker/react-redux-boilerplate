@@ -61,6 +61,7 @@
     "eslint-config-prettier": "^4.3.0",
     "husky": "^2.3.0",
     "lint-staged": "^8.1.7",
+    "prettier": "^1.17.1",
     "react-docgen": "^4.1.1"
   }
 }
