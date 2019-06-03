@@ -1,12 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// @flow
+import React from "react";
+import logo from "./logo.svg";
+import Logo from "./components/Logo/Logo";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <Logo logo={logo} />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>

@@ -10,11 +10,11 @@
     "lint": "eslint ./src",
     "lint:fix": "eslint --fix ./src",
     "eslint-check": "eslint --print-config . | eslint-config-prettier-check",
-    "flow": "flow"
+    "flow": "flow check"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "yarn flow && lint-staged"
     }
   },
   "lint-staged": {
@@ -24,7 +24,6 @@
     ],
     "src/**/*.{js,jsx}": [
       "yarn lint:fix",
-      "yarn flow",
       "git add"
     ]
   },
