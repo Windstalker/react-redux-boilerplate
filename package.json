@@ -64,6 +64,7 @@
     "faker": "^4.1.0",
     "flow-bin": "^0.98.1",
     "husky": "^2.3.0",
+    "json-schema-faker": "^0.5.0-rc17",
     "json-server": "^0.15.0",
     "lint-staged": "^8.1.7",
     "prettier": "^1.17.1",
