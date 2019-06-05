@@ -1,5 +1,9 @@
 // @flow
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { increase, decrease } from "../../actions/counter";
+
+import type { State } from "../../reducers/contract";
 
 type DefaultProps = {|
   onIncrement: () => void,
@@ -28,4 +32,14 @@ class Counter extends Component<Props> {
   }
 }
 
-export default Counter;
+export default connect(
+  function(state: State) {
+    return {
+      value: state.counter
+    };
+  },
+  {
+    onIncrement: increase,
+    onDecrement: decrease
+  }
+)(Counter);

@@ -9,7 +9,6 @@ import rootSaga from "./sagas";
 export default function configureStore(preloadedState?: Object) {
   /* Sagas */
   const sagaMiddleware = createSagaMiddleware();
-  sagaMiddleware.run(rootSaga);
 
   /* Middlewares */
   const middlewares = [sagaMiddleware];
@@ -26,6 +25,8 @@ export default function configureStore(preloadedState?: Object) {
   if (process.env.NODE_ENV !== "production" && module.hot) {
     module.hot.accept("./reducers", () => store.replaceReducer(rootReducer));
   }
+
+  sagaMiddleware.run(rootSaga);
 
   return store;
 }
